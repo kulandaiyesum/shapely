@@ -30,7 +30,7 @@ header, section {
 header {
     width: 100%;
     padding: 10px;
-    position: sticky;
+    /* position: sticky; */
     top: 0px;
     background-color: #fff;
 }
@@ -159,6 +159,7 @@ header {
 .link-div {
     padding: 16px 0;
     margin-bottom: 24px;
+    display: inline-block;
 }
 .active-btn {
     border: 2px solid #745cf9;
@@ -166,7 +167,6 @@ header {
     text-decoration: none;
     color: #fff;
     padding: 13px 26px;
-    margin: 0 0 24px 0;
     min-width: 200px;
     font-size: 12px;
 }
@@ -247,11 +247,11 @@ header {
 /* small prarllax section */
 .background-2  {
     background-image: url('../imgae/photo-2.jpg');
-    /* background-position: center; */
+    background-position: center;
+    background-attachment: fixed;
     background-repeat: no-repeat;
     background-size: cover;
     width: 100%;
-    position: static;
 }
 .background-2 .banner {
     padding: 96px 0;
@@ -310,8 +310,12 @@ header {
     display: flex;
     flex-wrap: wrap;
 }
-.flex-wrap img {
+.flex-wrap .image-responsive {
     width: 25%;
+    height: auto;
+}
+.image-responsive img {
+    width: 100%;
     height: auto;
 }
 /* background 3 */
@@ -319,14 +323,50 @@ header {
     background: url('../imgae/photo-4.jpg') no-repeat;
     background-position: center;
     background-size: cover;
-    position: static;
+    background-attachment: fixed;
+    height: 467px;
 }
 .background-3 .banner {
-    padding: 32px;
+    padding: 24px;
 }
 .background-3 .banner .banner-lines img {
     border-radius: 50%;
     width: 150px;
     height: 150px;
     margin-bottom: 24px;
+}
+
+/* clients */
+.clients {
+    padding: 96px 0;
+}
+.clients-contents h3 {
+    text-align: center;
+    font-size: 30px;
+    margin-bottom: 64px;
+}
+.clients-contents ul {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    list-style-type: none;
+}
+.clients-contents ul li img {
+    width: 100px;
+    height: 100px;
+}
+/* do you like */
+.dyk {
+    padding: 96px 0;
+}
+.dyk .row {
+    align-items: center;
+    justify-content: space-around;
+}
+.dyk h3 {
+    font-size: 30px;
+}
+.dyk .link-div {
+    margin-bottom: 0;
+    padding: 0;
 }
