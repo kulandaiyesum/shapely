@@ -10,10 +10,15 @@
     font-family: Raleway-bold;
     src: url('../fonts/Raleway-Bold.ttf');
 }
+@font-face {
+    font-family: Raleway-light;
+    src: url('../fonts/Raleway-Light.ttf');
+}
 * {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    font-family: Raleway-Regular;
 }
 /* general */
 .row {
@@ -30,7 +35,7 @@ header, section {
 header {
     width: 100%;
     padding: 10px;
-    /* position: sticky; */
+    position: sticky;
     top: 0px;
     background-color: #fff;
 }
@@ -46,7 +51,7 @@ header {
     font-weight: 100;
     color: #4c4c4c;
     cursor: pointer;
-    
+    font-family: Raleway-light;
 }
 /* navigation */
 .main-menu {
@@ -121,6 +126,63 @@ header {
 .second-submenu:hover .second-submenu-content {
     display: block;
 }
+
+.menu-icon {
+    height: 100%;
+    width: auto;
+    align-items: center;
+}
+#show-menu {
+    visibility: hidden;
+    width: auto;
+}
+.menu-icon {
+    display: none;
+}
+
+/* media for header */
+@media only screen and (max-width:991px) {
+    .container {
+        width: 90%;
+    }
+    header .row {
+        flex-wrap: wrap;
+    }
+    .menu-icon {
+        display: block;
+    }
+    .logo {
+        width: 90%;
+    }
+    .chk {
+        width: 10%;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+    }
+    .main-menu {
+        width: 100%;
+        height: auto;
+    }
+    .main-menu ul {
+        flex-direction: column;
+        width: 100%;
+    }
+    .main-menu ul li {
+        margin-right: 0;
+        width: 100%;
+    }
+    .main-menu ul li a {
+        width: 100%;
+    }
+    .main-menu ul {
+        display: none;
+    }
+    #show-menu:checked ~ .main-menu ul {
+        display: block;
+    }
+}
+
 /* banner section */
 .background-1 {
     background-image: url('../imgae/photo-1.jpg');
@@ -169,6 +231,7 @@ header {
     padding: 13px 26px;
     min-width: 200px;
     font-size: 12px;
+    font-family: Raleway-bold;
 }
 .normal-btn {
     border: 2px solid #fff;
@@ -178,6 +241,7 @@ header {
     margin: 0 0 24px 8px;
     min-width: 200px;
     font-size: 12px;
+    font-family: Raleway-bold;
 }
 .active-btn:hover {
     background-color: #5d47d7;
@@ -221,6 +285,21 @@ header {
     color: #8c979e;
     margin-bottom: 24px;
 }
+/*  resposive for section seo */
+@media only screen and (max-width:767px){
+    .section-seo .row {
+        flex-direction: column;
+    }
+    .image-flex {
+        width: 100%;
+    }
+    .contents {
+        width: 100%;
+    }
+    .contents .seo {
+        width: 100%;
+    }
+}
 /* section protflio */
 .section-protflio {
     padding: 96px 0;
@@ -243,6 +322,21 @@ header {
 }
 .protflio-image .image-flex {
     width: 90%;
+}
+/* resposive for protflionsection */
+@media only screen and (max-width:767px){
+    .section-protflio .row {
+        flex-direction: column;
+    }
+    .protflio {
+        width: 100%;
+    }
+    .protflio-image {
+        width: 100%;
+    }
+    .protflio-image .image-flex {
+        width: 100%;
+    }
 }
 /* small prarllax section */
 .background-2  {
@@ -309,6 +403,7 @@ header {
 .flex-wrap {
     display: flex;
     flex-wrap: wrap;
+    width: 100%;
 }
 .flex-wrap .image-responsive {
     width: 25%;
@@ -318,7 +413,25 @@ header {
     width: 100%;
     height: auto;
 }
+/* resposive for leatest projects */
+@media (min-width:768px) and (max-width:991px) {
+    .flex-wrap {
+        flex-wrap: wrap;
+    }
+    .image-responsive {
+        width: 50%;
+        height: auto;
+    }
+}
+@media only screen and (max-width:767px) {
+    .image-responsive {
+        width: 100%;
+    }
+}
 /* background 3 */
+.bg3 {
+    height: 491px;
+}
 .background-3 {
     background: url('../imgae/photo-4.jpg') no-repeat;
     background-position: center;
@@ -331,11 +444,10 @@ header {
 }
 .background-3 .banner .banner-lines img {
     border-radius: 50%;
-    width: 150px;
-    height: 150px;
+    max-width: 15%;
+    max-height: 15%;
     margin-bottom: 24px;
 }
-
 /* clients */
 .clients {
     padding: 96px 0;
@@ -364,9 +476,80 @@ header {
     justify-content: space-around;
 }
 .dyk h3 {
-    font-size: 30px;
+    font-size: 24px;
 }
 .dyk .link-div {
     margin-bottom: 0;
     padding: 0;
+}
+/* responsive for do you like */
+@media only screen and (max-width:767px) {
+    .dyk .row {
+        flex-direction: column;
+    }
+    .dyk-h3 {
+        width: 100%;
+        display: block;
+        margin-bottom: 8px;
+    }
+    .dyk .link-div {
+        width: 100%;
+        text-align: center;
+        margin-top: 16px;
+    }
+    .dyk .link-div .active-btn {
+        width: 100%; 
+    }
+}
+/* footer */
+.footer {
+    padding: 96px 0;
+    background-color: #0e1015;
+    color: #fff;
+    position: relative;
+}
+.footer-content {
+    width: 50%;
+    font-size: 14px;
+    line-height: 24px;
+    padding: 0 15px;
+    margin-top: 15px;
+}
+.footer-content a {
+    color:#fefefe;
+    opacity: 0.8;
+    font-weight: 600;
+    text-decoration: none;
+}
+.social-links {
+    width: 50%;
+    padding: 0 15px;
+}
+.social-links ul {
+    display: flex;
+    justify-content: flex-end;
+    list-style-type: none;
+}
+.social-links ul li {
+    padding: 0 8px 0 10px;
+}
+.social-links ul li a {
+    color: #fff;
+}
+.footer-up {
+    height: 36px;
+    width: 36px;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    margin: 0 24px 24px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.footer-up a {
+    font-size: 14px;
+    padding: 15px;
+    color: #fefefe;
+    border: 2px solid #fefefe;
 }
