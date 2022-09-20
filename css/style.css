@@ -141,9 +141,53 @@ header {
 }
 
 /* media for header */
-@media only screen and (max-width:991px) {
+@media only screen and (max-width:767px) {
     .container {
         width: 90%;
+    }
+    header {
+        position: static;
+    }
+    header .row {
+        flex-direction: column;
+    }
+    .menu-icon {
+        display: block;
+    }
+    .logo {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+    .chk {
+        display: none;
+    }
+    .main-menu {
+        width: 100%;
+        height: auto;
+    }
+    .main-menu ul {
+        flex-direction: column;
+        width: 100%;
+    }
+    .main-menu ul li {
+        margin-right: 0;
+        width: 100%;
+        border-bottom: 1px dotted #ccc;
+    }
+    .main-menu ul li:last-child {
+        border-bottom: none;
+    }
+    .main-menu ul li a {
+        width: 100%;
+    }
+}
+@media screen and (min-width:768px) and (max-width:991px) {
+    .container {
+        width: 90%;
+    }
+    header {
+        position: static;
     }
     header .row {
         flex-wrap: wrap;
@@ -175,12 +219,21 @@ header {
     .main-menu ul li a {
         width: 100%;
     }
-    .main-menu ul {
+    /* .main-menu ul {
         display: none;
-    }
+    } */
     #show-menu:checked ~ .main-menu ul {
         display: block;
     }
+}
+@media screen and (min-width:992px) and (max-width:1199px) {
+    
+}
+@media screen and (min-width:1200px) and (max-width:1399px) {
+    
+}
+@media screen and (min-width:1400px) {
+    
 }
 
 /* banner section */
@@ -211,7 +264,7 @@ header {
     font-weight: 100;
 }
 .banner-lines h1 {
-    font-size: 60px;
+    font-size: 48px;
     font-weight: 100;
     margin-bottom: 32px;
 }
@@ -253,6 +306,28 @@ header {
     background-color: #fff;
     transition: 0.3s;
 }
+/*  responsive */
+@media only screen and (max-width:767px) {
+    .banner-lines h1 {
+        font-size: 30px;
+    }
+}
+@media screen and (min-width:768px) and (max-width:991px) {
+    .banner-lines h1 {
+        font-size: 48px;
+    }
+}
+@media screen and (min-width:992px) and (max-width:1199px) {
+    .banner-lines h1 {
+        font-size: 60px;
+    }
+}
+@media screen and (min-width:1200px) and (max-width:1399px) {
+
+}
+@media screen and (min-width:1400px) {
+
+}
 /* section 1 */
 .section-seo {
     padding: 96px 0;
@@ -287,6 +362,12 @@ header {
 }
 /*  resposive for section seo */
 @media only screen and (max-width:767px){
+    .section-seo {
+        padding: 24px 0;
+    }
+    .section-seo .link-div {
+        margin-bottom: 0px;
+    }
     .section-seo .row {
         flex-direction: column;
     }
@@ -299,7 +380,27 @@ header {
     .contents .seo {
         width: 100%;
     }
+    .seo h3 {
+        font-size: 24px;
+    }
 }
+@media screen and (min-width:768px) and (max-width:991px) {
+    .seo h3 {
+        font-size: 36px;
+    }
+}
+@media screen and (min-width:992px) and (max-width:1199px) {
+    .section-seo {
+        padding: 48px 0;
+    }
+}
+@media screen and (min-width:1200px) and (max-width:1399px) {
+
+}
+@media screen and (min-width:1400px) {
+
+}
+
 /* section protflio */
 .section-protflio {
     padding: 96px 0;
@@ -325,6 +426,12 @@ header {
 }
 /* resposive for protflionsection */
 @media only screen and (max-width:767px){
+    .section-protflio {
+        padding: 24px 0;
+    }
+    .section-protflio .link-div {
+        margin-bottom: 0px;
+    }
     .section-protflio .row {
         flex-direction: column;
     }
@@ -338,6 +445,18 @@ header {
         width: 100%;
     }
 }
+@media screen and (min-width:768px) and (max-width:991px) {
+    
+}
+@media screen and (min-width:992px) and (max-width:1199px) {
+    
+}
+@media screen and (min-width:1200px) and (max-width:1399px) {
+    
+}
+@media screen and (min-width:1400px) {
+    
+}
 /* small prarllax section */
 .background-2  {
     background-image: url('../imgae/photo-2.jpg');
@@ -349,6 +468,22 @@ header {
 }
 .background-2 .banner {
     padding: 96px 0;
+}
+/* responsive */
+@media screen and (max-width:767px) {
+    
+}
+@media screen and (min-width:768px) and (max-width:991px) {
+    
+}
+@media screen and (min-width:992px) and (max-width:1199px) {
+    
+}
+@media screen and (min-width:1200px) and (max-width:1399px) {
+    
+}
+@media screen and (min-width:1400px) {
+    
 }
 /* limitlesss option */
 .limit {
@@ -379,6 +514,22 @@ header {
 .limit-content-img img {
     width:100%;
     height: auto;
+}
+/* responsive */
+@media screen and (max-width:767px) {
+    
+}
+@media screen and (min-width:768px) and (max-width:991px) {
+    
+}
+@media screen and (min-width:992px) and (max-width:1199px) {
+    
+}
+@media screen and (min-width:1200px) and (max-width:1399px) {
+    
+}
+@media screen and (min-width:1400px) {
+    
 }
 /* our leatest project */
 .leatest-projects {
@@ -414,19 +565,26 @@ header {
     height: auto;
 }
 /* resposive for leatest projects */
-@media (min-width:768px) and (max-width:991px) {
-    .flex-wrap {
-        flex-wrap: wrap;
+@media only screen and (max-width:767px) {
+    .image-responsive {
+        width: 100%;
+        height: auto;
     }
+}
+@media (min-width:768px) and (max-width:991px) {
     .image-responsive {
         width: 50%;
         height: auto;
     }
 }
-@media only screen and (max-width:767px) {
-    .image-responsive {
-        width: 100%;
-    }
+@media screen and (min-width:992px) and (max-width:1199px) {
+    
+}
+@media screen and (min-width:1200px) and (max-width:1399px) {
+    
+}
+@media screen and (min-width:1400px) {
+    
 }
 /* background 3 */
 .bg3 {
@@ -448,6 +606,22 @@ header {
     max-height: 15%;
     margin-bottom: 24px;
 }
+/* responsive */
+@media screen and (max-width:767px) {
+    
+}
+@media screen and (min-width:768px) and (max-width:991px) {
+    
+}
+@media screen and (min-width:992px) and (max-width:1199px) {
+    
+}
+@media screen and (min-width:1200px) and (max-width:1399px) {
+    
+}
+@media screen and (min-width:1400px) {
+    
+}
 /* clients */
 .clients {
     padding: 96px 0;
@@ -466,6 +640,22 @@ header {
 .clients-contents ul li img {
     width: 100px;
     height: 100px;
+}
+/* responsive */
+@media screen and (max-width:767px) {
+    
+}
+@media screen and (min-width:768px) and (max-width:991px) {
+    
+}
+@media screen and (min-width:992px) and (max-width:1199px) {
+    
+}
+@media screen and (min-width:1200px) and (max-width:1399px) {
+    
+}
+@media screen and (min-width:1400px) {
+    
 }
 /* do you like */
 .dyk {
@@ -500,6 +690,18 @@ header {
     .dyk .link-div .active-btn {
         width: 100%; 
     }
+}
+@media screen and (min-width:768px) and (max-width:991px) {
+    
+}
+@media screen and (min-width:992px) and (max-width:1199px) {
+    
+}
+@media screen and (min-width:1200px) and (max-width:1399px) {
+    
+}
+@media screen and (min-width:1400px) {
+    
 }
 /* footer */
 .footer {
@@ -552,4 +754,20 @@ header {
     padding: 15px;
     color: #fefefe;
     border: 2px solid #fefefe;
+}
+/* responsive */
+@media screen and (max-width:767px) {
+    
+}
+@media screen and (min-width:768px) and (max-width:991px) {
+    
+}
+@media screen and (min-width:992px) and (max-width:1199px) {
+    
+}
+@media screen and (min-width:1200px) and (max-width:1399px) {
+    
+}
+@media screen and (min-width:1400px) {
+    
 }
